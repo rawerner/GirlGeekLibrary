@@ -7,5 +7,5 @@ class User < ActiveRecord::Base
   validates :location, presence: true, length: {maximum: 40}
   validates :bio, length: {maximum: 160}
 
-  has_many : books
+
 end
