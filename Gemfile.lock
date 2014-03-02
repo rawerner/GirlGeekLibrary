@@ -106,6 +106,8 @@ GEM
     orm_adapter (0.5.0)
     pg (0.17.1)
     polyglot (0.3.4)
+    protected_attributes (1.0.5)
+      activemodel (>= 4.0.1, < 5.0)
     pry (0.9.12.6)
       coderay (~> 1.0)
       method_source (~> 0.8)
@@ -219,6 +221,7 @@ DEPENDENCIES
   jquery-rails (= 3.0.4)
   launchy
   pg
+  protected_attributes
   pry
   rails (= 4.0.3)
   rails_12factor
