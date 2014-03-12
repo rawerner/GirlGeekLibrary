@@ -23,6 +23,7 @@ rerun.txt
 pickle-email-*.html
 .project
 config/initializers/secret_token.rb
+config/application.yml
 
 # Ignore other unneeded files.
 database.yml
@@ -33,3 +34,6 @@ doc/
 .DS_Store
 .idea
 .secret
+
+# Ignore application configuration
+/config/application.yml

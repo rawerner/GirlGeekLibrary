@@ -1,0 +1,13 @@
+<% provide(:title, 'Home') %>
+<h1>Book List</h1>
+
+<% if user_signed_in? %>
+  <%= render partial: "books/new" %>
+<% else %>
+  <p>Sign in or Sign up to add a book</p>
+<% end %>
+<% @books.each do |book| %>
+  <%= render book %>
+<% end %>
+
+

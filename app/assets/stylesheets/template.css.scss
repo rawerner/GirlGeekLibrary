@@ -2,8 +2,33 @@
 
 
 /* universal */
+/*body {
+  background: asset-url('wood.jpg', image) no-repeat center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}*/
 
+body {
+  background-color: #17061e;
+  background-image: asset-url('back.png', image);
+  background-repeat: repeat-x;
+  background-position: top right;
+  background-attachment: fixed;
+}
 
+.navbar-inverse {
+  background-color: #17061E;
+  border-color: transparent;
+  border-bottom: 1px solid #5A074B;
+}
+
+.navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus {
+color: white;
+background-color: #5A074B;
+height: 60px;
+}
 
 /* typography */
 
@@ -12,10 +37,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: 3em;
-  letter-spacing: -2px;
+  font-size: 2em;
+  letter-spacing: 0px;
   margin-bottom: 30px;
-  text-align: center;
+  text-align: left;
+  color: #fff;
 }
 
 h2 {
@@ -30,6 +56,7 @@ h2 {
 p {
   font-size: 1.1em;
   line-height: 1.7em;
+  color: #fff;
 }
 
 
@@ -45,7 +72,7 @@ p {
   color: white;
   text-transform: uppercase;
   letter-spacing: -1px;
-  padding-top: 9px;
+  padding-bottom: 2px;
   font-weight: bold;
   line-height: 1;
   &:hover {
@@ -59,12 +86,12 @@ p {
 footer {
   margin-top: 45px;
   padding-top: 5px;
-  border-top: 1px solid $gray;
-  color: $gray-light;
+  border-top: 1px solid #fff;
+  color: #fff;
   a {
-    color: $gray;
+    color: #fff;
     &:hover {
-      color: $gray-darker;
+      color: #580A42;
     }
   }
   small {
@@ -82,4 +109,18 @@ footer {
 
 /* miscellaneous */
 
+label {
+  display: inline-block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #fff;
+}
 
+.cover_image{
+  height:400px;
+  width:200px;
+}
+
+.thumbnail{
+  max-width: 135px;
+}

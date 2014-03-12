@@ -1,13 +1,29 @@
 GirlGeekLibrary::Application.routes.draw do
 
   devise_for :users
-  resources :users
+  resources :users, :except => [:index, :destroy]
+  resources :books
 
-  root "static_pages#home"
-  match '/signup',  to: 'users#new',                  via: 'get'
+  root 'static_pages#home'
+
+  resources :books do
+    member do
+      get :search
+
+    end
+  end
+
+  # resources :users do
+  #   resources :books, get: :search
+  # end
+
   match '/howitworks',    to: 'static_pages#howitworks',    via: 'get'
-  match '/about',   to: 'static_pages#about',         via: 'get'
-  match '/contact', to: 'static_pages#contact',       via: 'get'
+  match '/about',         to: 'static_pages#about',         via: 'get'
+  match '/contact',       to: 'static_pages#contact',       via: 'get'
+  match ':controller(/:action(/:id))', :via => 'get'
+
+
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

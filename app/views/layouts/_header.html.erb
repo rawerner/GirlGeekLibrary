@@ -8,15 +8,25 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <%= link_to "Girl Geek Library", root_path, :id => 'logo' %>
+      <%= link_to(image_tag("logo.png", :alt => "logo", :id=>"logo"), root_path, :id=>"logo") %>
     </div>
+
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-9">
       <ul class="nav navbar-nav pull-right">
         <li class="active"><%= link_to "Home", root_path, :class => 'active' %></li>
-        <li><%= link_to "How it works",    howitworks_path %></li>
-        <li><%= link_to "Sign in", '#' %></li>
+        <% if current_user %>
+          <li><%= link_to "Library",    root_path %></li>
+          <li><%= link_to "Profile",    current_user %></li>
+          <li><%= link_to "Sign Out", "/users/sign_out", method: :delete %></li>
+        <% else %>
+          <li><%= link_to "How it works",    howitworks_path %></li>
+          <li><%= link_to "Sign Up", "/users/sign_up" %></li>
+          <li><button type="button" class="btn btn-default navbar-btn"><%= link_to "Sign In", new_user_session_path %></button></li>
+        <% end %>
+        <%= flash.notice %>
+        <%= flash.alert %>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->

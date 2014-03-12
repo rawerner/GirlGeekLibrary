@@ -1,0 +1,46 @@
+<% provide(:title, 'Add Book') %>
+<h1>Add A Book</h1>
+
+<div class="row">
+  <div class="span6 offset3">
+    <%= form_for(@book) do |f| %>
+
+      <%= f.label :title %>
+      <%= f.text_field :title %>
+
+      <%= f.label :authors %>
+      <%= f.text_field :authors %>
+
+      <%= f.label :coverThumbnail %>
+      <%= f.text_field :coverThumbnail %>
+
+      <%= f.label :coverImage %>
+      <%= f.text_field :coverImage %>
+
+      <%= f.label :contentVersion %>
+      <%= f.text_field :contentVersion %>
+
+      <%= f.label :publisher %>
+      <%= f.text_field :publisher %>
+
+      <%= f.label :publishedDate %>
+      <%= f.text_field :publishedDate %>
+
+      <%= f.label :description %>
+      <%= f.text_field :description %>
+
+      <%= f.label :categories %>
+      <%= f.text_field :categories %>
+
+      <%= f.label :averageRating %>
+      <%= f.text_field :averageRating %>
+
+      <%= f.label :ratingsCount %>
+      <%= f.text_field :ratingsCount %>
+
+
+      <%= f.submit "Add book", class: "btn btn-large btn-primary" %>
+    <% end %>
+  </div>
+</div>
+

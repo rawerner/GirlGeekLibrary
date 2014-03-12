@@ -1,0 +1,20 @@
+<div>
+  <div class= "cover_image">
+    <%= link_to((image_tag "#{book.cover_image}", alt: "#{book.title}", title: "#{book.title}"), "/", class: "thumbnail") %>
+
+  </div>
+  <div class= "desc_body">
+    <h1><%= @book.title %></h1>
+    <p><%= @book.author %></p>
+    <p><%= @book.content_version %></p>
+    <p><%= @book.publisher %></p>
+    <p><%= @book.published_date %></p>
+    <p><%= @book.description %></p>
+    <p><%= @book.categories %></p>
+
+  </div>
+</div>
+
+
+
+

@@ -1,0 +1,35 @@
+<div class="row">
+  <% @googleBooks.each do |book| %>
+    <%if book.image_link %>
+      <div class="col-xs-4 col-sm-3 col-md-2">
+        <%= link_to((image_tag "#{book.image_link}", alt: "#{book.title}", title: "#{book.title}"), "/", class: "thumbnail") %>
+      <% end %>
+        <div  class="add_button">
+          <%= form_for Book.new(title: book.title, author: book.authors,
+                               cover_thumbnail: book.image_link,
+                               cover_image: book.image_link,
+                               publsher: book.publisher,
+                               published_date: book.published_date,
+                               description: book.description,
+                               categories: book.categories,
+                               average_rating: book.average_rating,
+                               ratings_count: book.ratings_count,
+                               user_id: current_user.id) do |f| %>
+            <%= f.hidden_field :title %>
+            <%= f.hidden_field :author %>
+            <%= f.hidden_field :cover_thumbnail %>
+            <%= f.hidden_field :cover_image %>
+            <%= f.hidden_field :publisher %>
+            <%= f.hidden_field :published_date %>
+            <%= f.hidden_field :description %>
+            <%= f.hidden_field :categories %>
+            <%= f.hidden_field :average_rating %>
+            <%= f.hidden_field :ratings_count %>
+            <%= f.hidden_field :user_id %>
+
+            <%= f.submit "Add to my Library" %>
+            <% end %>
+        </div>
+      </div>
+  <% end %>
+</div>
