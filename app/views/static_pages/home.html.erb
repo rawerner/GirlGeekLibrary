@@ -1,7 +1,8 @@
 <div class="row">
   <% @books.each do |book| %>
-    <div class="col-xs-4 col-sm-3 col-md-2">
-      <%= link_to((image_tag "#{book.cover_thumbnail}/100%x180", alt: "#{book.title}", title: "#{book.title}"), "/books/#{book.id}", class: "thumbnail") %>
-    </div>
+      <div class="col-xs-4 col-sm-3 col-md-2">
+        <%= link_to((image_tag "#{book.cover_thumbnail}", alt: "#{book.title}", title: "#{book.title}"), "/book/#{book.id}", class: "thumbnail") %>
+      </div>
   <% end %>
 </div>
+

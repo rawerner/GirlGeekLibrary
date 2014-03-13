@@ -6,7 +6,7 @@ class Book < ActiveRecord::Base
   attr_accessible :title, :author, :cover_thumbnail, :cover_image,
                   :content_version, :publisher, :published_date,
                   :description, :categories, :average_rating,
-                  :ratings_count, :owner, :borrower, :book_title
+                  :ratings_count, :user_id
 
 end
 

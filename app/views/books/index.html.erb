@@ -1,13 +1,12 @@
 <% provide(:title, 'Home') %>
-<h1>Book List</h1>
+<h2>A Collection of Technology Books based in Nashville that want to be Borrowed</h2>
+<div class="row">
+  <% @books.each do |book| %>
+      <div class="col-xs-4 col-sm-3 col-md-2">
+        <%= link_to((image_tag "#{book.cover_thumbnail}", alt: "#{book.title}", title: "#{book.title}"), "/books/#{book.id}", class: "thumbnail") %>
+      </div>
+  <% end %>
+</div>
 
-<% if user_signed_in? %>
-  <%= render partial: "books/new" %>
-<% else %>
-  <p>Sign in or Sign up to add a book</p>
-<% end %>
-<% @books.each do |book| %>
-  <%= render book %>
-<% end %>
 
 

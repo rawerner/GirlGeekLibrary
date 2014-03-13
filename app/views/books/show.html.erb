@@ -1,18 +1,14 @@
-<div>
-  <div class= "cover_image">
-    <%= link_to((image_tag "#{book.cover_image}", alt: "#{book.title}", title: "#{book.title}"), "/", class: "thumbnail") %>
-
+<div class="row">
+  <div class="col-xs-3 bookbox">
+    <%= image_tag("#{@book.cover_image}", class: "resize_image img-responsive") %>
   </div>
-  <div class= "desc_body">
+  <div class=class="col-xs-4 col-md-6 bookbox">
     <h1><%= @book.title %></h1>
     <p><%= @book.author %></p>
-    <p><%= @book.content_version %></p>
-    <p><%= @book.publisher %></p>
-    <p><%= @book.published_date %></p>
+    <p><%= @book.publisher + " | " + @book.published_date + " | " + @book.categories %></p>
     <p><%= @book.description %></p>
-    <p><%= @book.categories %></p>
-
   </div>
+
 </div>
 
 

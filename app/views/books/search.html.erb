@@ -1,21 +1,21 @@
 <div class="row">
-    <% owner_id = @owner_id %>
     <% @googleBooks.each do |book| %>
       <%if book.image_link %>
         <div class="col-xs-4 col-sm-3 col-md-2">
-          <%= link_to((image_tag "#{book.image_link}", alt: "#{book.title}", title: "#{book.title}"), "/", class: "thumbnail") %>
+          <%= (image_tag "#{book.image_link}", alt: "#{book.title}", title: "#{book.title}", class: "thumbnail") %>
 
           <div  class="add_button">
-            <%= form_for Book.new(title: book.title, author: book.authors,
+            <%= form_for Book.new(title: book.title,
+                                 author: book.authors,
                                  cover_thumbnail: book.image_link,
                                  cover_image: book.image_link,
-                                 publsher: book.publisher,
+                                 publisher: book.publisher,
                                  published_date: book.published_date,
                                  description: book.description,
                                  categories: book.categories,
                                  average_rating: book.average_rating,
                                  ratings_count: book.ratings_count,
-                                 user_id: @owner_id) do |f| %>
+                                 user_id: current_user.id) do |f| %>
               <%= f.hidden_field :title %>
               <%= f.hidden_field :author %>
               <%= f.hidden_field :cover_thumbnail %>

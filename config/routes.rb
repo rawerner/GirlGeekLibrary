@@ -4,12 +4,11 @@ GirlGeekLibrary::Application.routes.draw do
   resources :users, :except => [:index, :destroy]
   resources :books
 
-  root 'static_pages#home'
+  root 'books#index'
 
   resources :books do
     member do
       get :search
-
     end
   end
 
