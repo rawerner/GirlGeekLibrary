@@ -3,7 +3,7 @@
 <p>
 <div class="row">
   <div class="col-xs-2 space">
-    <%= image_tag @user.photo_url(:thumb).to_s, class: "img-rounded" if @user.photo? %>
+    <%= image_tag @user.photo_url(:thumb), class: "img-rounded" if @user.photo? %>
   </div>
   <div class="col-xs-4 col-md-6">
     <div class="col-xs-4 col-md-6">>

@@ -1,4 +1,4 @@
-#TechShelf User Stories
+#Girl Geek Library User Stories
 
 ##Creating new User Accounts & Adding books
 

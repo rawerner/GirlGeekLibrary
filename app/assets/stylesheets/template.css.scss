@@ -121,12 +121,17 @@ label {
 }
 
 .cover_image{
-  height:400px;
+  height:00px;
   width:200px;
 }
 
 .thumbnail{
   max-width: 135px;
+
+  img{
+    max-height: 161px;
+    min-height: 161px;
+  }
 }
 
 .shorten{
@@ -139,6 +144,7 @@ label {
   height: 48px;
   background-color: #F51050 !important;
   border-color: #F51050 !important;
+  margin-top: 10px;
 }
 
 .panel {
@@ -160,7 +166,7 @@ label {
 
 .name{
   margin-bottom: 0px;
-  margin-top: 0px;
+  margin-top: -25px;
   font-size: 2em;
   letter-spacing: 0px;
   text-align: left;
@@ -170,3 +176,5 @@ label {
 .space{
   margin-bottom: 15px;
 }
+
+

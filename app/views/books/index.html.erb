@@ -2,7 +2,7 @@
 <h2>A Collection of Technology Books based in Nashville that want to be Borrowed</h2>
 <div class="row">
   <% @books.each do |book| %>
-      <div class="col-xs-4 col-sm-3 col-md-2">
+      <div class="col-xs-4 col-sm-3 col-md-2 bookrow">
         <%= link_to((image_tag "#{book.cover_thumbnail}", alt: "#{book.title}", title: "#{book.title}"), "/books/#{book.id}", class: "thumbnail") %>
       </div>
   <% end %>

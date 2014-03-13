@@ -1,8 +1,8 @@
 <div class="row">
-  <div class="col-xs-3 bookbox">
+  <div class="col-xs-3">
     <%= image_tag("#{@book.cover_image}", class: "resize_image img-responsive") %>
   </div>
-  <div class=class="col-xs-4 col-md-6 bookbox">
+  <div class="col-xs-6 col-md-8">
     <h1><%= @book.title %></h1>
     <p><%= @book.author %></p>
     <p><%= @book.publisher + " | " + @book.published_date + " | " + @book.categories %></p>
